@@ -183,6 +183,7 @@ public class Book {
 
 - **Description:** The `Book` class contains fields `id`, `title`, and `author`, along with their constructor, getters, and setters. The `id` field is automatically generated with a `UUID`. The `toString()` method provides a readable representation of the *Book* object.
 
+
 ### CreateBookDto
 
 The DTO `CreateBookDto` is used to transfer the data necessary for creating a new *Book*.
@@ -226,4 +227,3 @@ public class BookController {
  @PostMapping("/new") public Book createNewBook(@Valid @RequestBody CreateBookDto bookDto) { return messageProducer.output(bookDto); }}  
 ```  
 - **Description:** The `BookController` class contains an endpoint `/books/new` that accepts a POST request with a `CreateBookDto` in the body. This endpoint uses the `MessageProducer` to create a new Book and send it to the queue.
-
